@@ -21,8 +21,7 @@ fi
 
 # IF SYSTEM USES MD5SUM
 if type "md5sum" > /dev/null 2>&1; then
-  echo "md5sum"
-  NEW_PASSWORD=$(echo -n "$1$SALT_FOR_PASSWORD" | md5sum)
+  NEW_PASSWORD=$(echo -n "$1$SALT_FOR_PASSWORD" | md5sum | awk '{ print $1 }')
 fi
 
 # COPY TO CLIPBOARD IF USER HAS PBCOPY (MAC)
