@@ -2,7 +2,7 @@
 
 The project is a prototype password generator for bash-compliant terminals that will provide a password for a given keyword or phrase. This is mostly a just-for-fun idea that will provide a reproducable password for the given keyword (like a URL).
 
-`I'm aware that if someone gains access to your computer, they can generate your password for a given keyword if it is typed the exact same way. Use this script at your own risk. :)`
+`I'm aware that if someone gains access to your computer, they can generate your password for a given keyword if it is typed the exact same way. I'm sure there are many a security research that would confirm this is a bad idea. So, use this script at your own risk. :)`
 
 After saying that, if you would still like to try it out...
 
