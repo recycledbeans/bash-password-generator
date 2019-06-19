@@ -38,7 +38,7 @@ For instance, running the command like so:
 
 ```bash
 
-$ generate github.com
+$ generatepassword github.com
 
 ```
 
