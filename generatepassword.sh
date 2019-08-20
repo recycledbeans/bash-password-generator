@@ -46,7 +46,7 @@ then
   exit 0
 fi
 
-NEW_PASSWORD=$(make_md5_hash "$1.$SALT_FOR_PASSWORD" | tr a @ | tr 9 \! | tr b B | tr f F)
+NEW_PASSWORD=$(make_md5_hash "$1.$SALT_FOR_PASSWORD" | base64 | sed -E "s/^(.{6})(.{6})(.{3})(.{3})(.*)/\1#\2_\4\3/g")
 
 # COPY TO CLIPBOARD IF USER HAS PBCOPY (MAC)
 if type "pbcopy" > /dev/null 2>&1; then
